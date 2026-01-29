@@ -18,13 +18,19 @@ btn.addEventListener("click", function() {
     }
 
     carddiv.id = "hely";
-    carddiv.classList.add("card", "col-2", "m-2", "p-0");
-    cardimg.classList.add("card-img-top");
-    carddivbody.classList.add("card-body");
+    carddiv.classList.add("card", "col-2", "m-2", "p-0", "col-xs-12" );
+    carddiv.style.boxShadow = "10px 15px 25px rgba(151, 9, 116, 0.5)";
+    cardimg.classList.add("card-img-top", "img-fluid", "h-100");
+    carddivbody.classList.add("card-body", "mt-3", "text-center");
     cardtitle.classList.add("card-title");
     
-    carddelete.style.background = "darkred";
+    
+    carddelete.style.background = "linear-gradient(to right, var(--bs-pink), var(--bs-indigo))";
     carddelete.style.color = "white";
+    carddelete.style.boxShadow = "5px 7px 15px rgba(151, 9, 116, 0.5)";
+    carddelete.style.fontSize = "1rem";
+    carddelete.style.marginTop = "10px";
+    carddelete.style.width = "100%";
     
     carddelete.type = "button";
     carddelete.classList.add("btn");
