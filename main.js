@@ -1,5 +1,5 @@
 const cim = document.getElementById("cim");
-const mufaj = document.getElementById("mufaj");
+const mufaj = document.getElementById("film-tipus");
 const kep = document.getElementById("kep-url");
 const body = document.querySelector("body");
 const btn = document.getElementById("hozzaadas");
@@ -10,6 +10,7 @@ btn.addEventListener("click", function() {
     const cardimg = document.createElement("img");
     const carddivbody = document.createElement("div");
     const cardtitle = document.createElement("h5");
+    const cardtext = document.createElement("p");
     const carddelete = document.createElement("input");
 
     if (cim.value == "" || kep.value == "") {
@@ -23,6 +24,7 @@ btn.addEventListener("click", function() {
     cardimg.classList.add("card-img-top", "img-fluid", "h-100");
     carddivbody.classList.add("card-body", "mt-3", "text-center");
     cardtitle.classList.add("card-title");
+    cardtext.classList.add("card-text");
     
     
     carddelete.style.background = "linear-gradient(to right, var(--bs-pink), var(--bs-indigo))";
@@ -37,15 +39,20 @@ btn.addEventListener("click", function() {
 
     cardimg.src = kep.value.trim();
     cardtitle.innerText = cim.value;
+    cardtext.innerHTML = mufaj.value.trim();
     carddelete.value = "Törlés";
 
     carddelete.addEventListener("click", function() {
         carddiv.remove(this.closest);        
     })
 
-    carddivbody.append(cardtitle);
+    carddivbody.append(cardtitle, cardtext);
     carddivbody.append(carddelete);
     carddiv.append(cardimg);
     carddiv.append(carddivbody);
     kartyahely.append(carddiv);
+
+    cim.value = "";
+    mufaj.value = "Akcio";
+    kep.value = "";
 })
