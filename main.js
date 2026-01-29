@@ -17,7 +17,8 @@ btn.addEventListener("click", function() {
         return
     }
 
-    carddiv.classList.add("card", "col-3");
+    carddiv.id = "hely";
+    carddiv.classList.add("card", "col-2", "m-2", "p-0");
     cardimg.classList.add("card-img-top");
     carddivbody.classList.add("card-body");
     cardtitle.classList.add("card-title");
