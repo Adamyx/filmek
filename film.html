@@ -8,39 +8,47 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="scss/_variables.scss">
 <title>Title</title>
 </head>
-<body>
-    <form action="">
-        <fieldset>
-            <section class="row">
-                <div class="col-4">
-                    <div class="input-group text-center">
-                        <label for="cim" class="input-group-text">Film címe</label>
-                        <input type="text" id="cim" class="form-control">
+<body class=""> 
+    <h1 class="text-center mt-2">Megnőzendő filmek</h1>
+    <main class="container">
+        <form action="" class="mt-5">
+            <fieldset>
+                <section class="row">
+                    <div class="col-4">
+                        <div class="input-group text-center">
+                            <label for="cim" class="input-group-text">Film címe</label>
+                            <input type="text" id="cim" class="form-control">
+                        </div>
                     </div>
-                </div>
-                <div class="col-2">
-                    <div class="text-center input-group">
-                        <label for="film-tipus" class="input-group-text">Film típusa</label>
-                        <select name="film-tipus" id="film-tipus" class="form-control">
-                            <option value="Akcio">Akcio</option>
-                            <option value="Vigjatek">Vigjatek</option>
-                            <option value="Drama">Drama</option>
-                            <option value="Sci-Fi">Sci-Fi</option>
-                            <option value="Horror">Horror</option>
-                        </select>
-                    </div> 
-                </div>
+                    <div class="col-2">
+                        <div class="text-center input-group">
+                            <label for="film-tipus" class="input-group-text">Film típusa</label>
+                            <select name="film-tipus" id="film-tipus" class="form-control">
+                                <option value="Akcio">Akcio</option>
+                                <option value="Vigjatek">Vigjatek</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Sci-Fi">Sci-Fi</option>
+                                <option value="Horror">Horror</option>
+                            </select>
+                        </div> 
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group text-center">
+                            <label for="kep-url" class="input-group-text">Kép URL</label>
+                            <input type="text" id="kep-url" class="form-control" placeholder="https://...">
+                        </div>
+                    </div>
+                    <div class="col-2 d-flex align-items-center">
+                        <button id="hozzaadas" class="btn btn-primary w-100">Hozzáadás</button>
+                    </div>
+                </section>
+            </fieldset>
+        </form>
+    </main>
 
- 
-            </section>
-
-
-            
-
-        </fieldset>
-    </form>
 
 
 
