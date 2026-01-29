@@ -22,11 +22,19 @@ btn.addEventListener("click", function() {
     carddivbody.classList.add("card-body");
     cardtitle.classList.add("card-title");
     
+    carddelete.style.background = "darkred";
+    carddelete.style.color = "white";
+    
     carddelete.type = "button";
-    carddelete.classList.add("btn", "btn-danger", "text-white");
+    carddelete.classList.add("btn");
 
     cardimg.src = kep.value.trim();
     cardtitle.innerText = cim.value;
+    carddelete.value = "Törlés";
+
+    carddelete.addEventListener("click", function() {
+        carddiv.remove();        
+    })
 
     carddivbody.append(cardtitle);
     carddivbody.append(carddelete);
