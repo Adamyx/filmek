@@ -21,14 +21,15 @@ btn.addEventListener("click", function() {
     cardimg.classList.add("card-img-top");
     carddivbody.classList.add("card-body");
     cardtitle.classList.add("card-title");
+    carddelete.classList.add("btn");
     
     carddelete.style.background = "darkred";
     carddelete.style.color = "white";
     
     carddelete.type = "button";
-    carddelete.classList.add("btn");
-
+    
     cardimg.src = kep.value.trim();
+    cardimg.alt = "Itt egy kép látható a filmről";
     cardtitle.innerText = cim.value;
     carddelete.value = "Törlés";
 
