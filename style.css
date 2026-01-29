@@ -3,9 +3,10 @@ body{
 }
 
 .hozzadas{
-    background-color: var(--bs-purple);
+    background: linear-gradient(to right, var(--bs-pink), var(--bs-indigo));
     border-color: var(--bs-indigo);
     color: whitesmoke;
+    box-shadow: 10px 15px 25px rgba(151, 9, 116, 0.5);
 }
 
 .hozzadas:hover{
@@ -19,15 +20,23 @@ h1{
 }
 
 .input-group-text{
-    background-color: var(--bs-purple);
+    background: linear-gradient(to right, var(--bs-pink), var(--bs-indigo));
     border-color: var(--bs-indigo);
     color: whitesmoke;
+    box-shadow: 10px 15px 25px rgba(151, 9, 116, 0.5);
+}
+
+.form-control{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-color: var(--bs-indigo);
+    color: black;
+    box-shadow: 10px 15px 25px rgba(151, 9, 116, 0.5);
 }
 
 
 
 
-
+/* extra színek bootstrappel */
 
 /* ========== BACKGROUNDS ========== */
 .bg-blue    { background-color: var(--bs-blue) !important; }
