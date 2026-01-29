@@ -18,12 +18,11 @@ btn.addEventListener("click", function() {
     }
 
     carddiv.id = "hely";
-    carddiv.classList.add("card", "col-2", "m-2", "p-0", "col-xs-12" );
+    carddiv.classList.add("card", "col-2", "m-2", "p-0", "col-xs-12");
     carddiv.style.boxShadow = "10px 15px 25px rgba(151, 9, 116, 0.5)";
     cardimg.classList.add("card-img-top", "img-fluid", "h-100");
     carddivbody.classList.add("card-body", "mt-3", "text-center");
     cardtitle.classList.add("card-title");
-    carddelete.classList.add("btn");
     
     
     carddelete.style.background = "linear-gradient(to right, var(--bs-pink), var(--bs-indigo))";
@@ -34,14 +33,14 @@ btn.addEventListener("click", function() {
     carddelete.style.width = "100%";
     
     carddelete.type = "button";
-    
+    carddelete.classList.add("btn");
+
     cardimg.src = kep.value.trim();
-    cardimg.alt = "Itt egy kép látható a filmről";
     cardtitle.innerText = cim.value;
     carddelete.value = "Törlés";
 
     carddelete.addEventListener("click", function() {
-        carddiv.remove();        
+        carddiv.remove(this.closest);        
     })
 
     carddivbody.append(cardtitle);
