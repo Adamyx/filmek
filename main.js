@@ -23,6 +23,7 @@ btn.addEventListener("click", function() {
     cardimg.classList.add("card-img-top", "img-fluid", "h-100");
     carddivbody.classList.add("card-body", "mt-3", "text-center");
     cardtitle.classList.add("card-title");
+    carddelete.classList.add("btn");
     
     
     carddelete.style.background = "linear-gradient(to right, var(--bs-pink), var(--bs-indigo))";
@@ -33,9 +34,9 @@ btn.addEventListener("click", function() {
     carddelete.style.width = "100%";
     
     carddelete.type = "button";
-    carddelete.classList.add("btn");
-
+    
     cardimg.src = kep.value.trim();
+    cardimg.alt = "Itt egy kép látható a filmről";
     cardtitle.innerText = cim.value;
     carddelete.value = "Törlés";
 
