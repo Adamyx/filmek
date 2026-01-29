@@ -13,9 +13,31 @@
 <body>
     <form action="">
         <fieldset>
-            <input type="text" id="cim">
-            <label for="cim">Film címe</label>
-            <option value=""></option>
+            <section class="row">
+                <div class="col-4">
+                    <div class="input-group text-center">
+                        <label for="cim" class="input-group-text">Film címe</label>
+                        <input type="text" id="cim" class="form-control">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="text-center input-group">
+                        <label for="film-tipus" class="input-group-text">Film típusa</label>
+                        <select name="film-tipus" id="film-tipus" class="form-control">
+                            <option value="Akcio">Akcio</option>
+                            <option value="Vigjatek">Vigjatek</option>
+                            <option value="Drama">Drama</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Horror">Horror</option>
+                        </select>
+                    </div> 
+                </div>
+
+ 
+            </section>
+
+
+            
 
         </fieldset>
     </form>
