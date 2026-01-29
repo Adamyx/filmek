@@ -3,13 +3,13 @@ const mufaj = document.getElementById("mufaj");
 const kep = document.getElementById("kep-url");
 const body = document.querySelector("body");
 const btn = document.getElementById("hozzaadas");
+const kartyahely = document.getElementById("kartyak");
 
 btn.addEventListener("click", function() {
     const carddiv = document.createElement("div");
     const cardimg = document.createElement("img");
     const carddivbody = document.createElement("div");
     const cardtitle = document.createElement("h5");
-    const cardtext = document.createElement("p");
     const carddelete = document.createElement("input");
 
     if (cim.value == "" || kep.value == "") {
@@ -17,12 +17,20 @@ btn.addEventListener("click", function() {
         return
     }
 
-    carddiv.classList.add("card");
+    carddiv.classList.add("card", "col-3");
     cardimg.classList.add("card-img-top");
     carddivbody.classList.add("card-body");
     cardtitle.classList.add("card-title");
-    cardtext.classList.add("card-text");
     
     carddelete.type = "button";
     carddelete.classList.add("btn", "btn-danger", "text-white");
+
+    cardimg.src = kep.value.trim();
+    cardtitle.innerText = cim.value;
+
+    carddivbody.append(cardtitle);
+    carddivbody.append(carddelete);
+    carddiv.append(cardimg);
+    carddiv.append(carddivbody);
+    kartyahely.append(carddiv);
 })
