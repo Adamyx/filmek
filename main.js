@@ -43,7 +43,7 @@ btn.addEventListener("click", function() {
     carddelete.value = "Törlés";
 
     carddelete.addEventListener("click", function() {
-        carddiv.remove(this.closest);        
+        carddiv.remove();        
     })
 
     carddivbody.append(cardtitle, cardtext);
